@@ -34,6 +34,8 @@ async function loadFactory(
       return (await import('./challengers/elysia2')).createHandler;
     case 'hono':
       return (await import('./challengers/hono')).createHandler;
+    case 'hono5':
+      return (await import('./challengers/hono5')).createHandler;
     default:
       return undefined;
   }

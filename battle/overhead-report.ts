@@ -120,7 +120,7 @@ export function renderOverheadReport(
   return `# BurgerAPI Overhead — In-Process Fetch Handler Comparison
 
 _Generated ${meta.date} · Bun ${meta.bunVersion} · ${meta.os}/${meta.arch} · ${meta.cpu}_
-**Frameworks:** BurgerAPI ${meta.burgerApiVersion} (${meta.burgerApiCommit}, ${meta.burgerApiDirty ? 'dirty' : 'clean'}) · Elysia ${versions.elysia} · Elysia 2 ${versions.elysia2} · Hono ${versions.hono}
+**Frameworks:** BurgerAPI ${meta.burgerApiVersion} (${meta.burgerApiCommit}, ${meta.burgerApiDirty ? 'dirty' : 'clean'}) · Elysia ${versions.elysia} · Elysia 2 ${versions.elysia2} · Hono ${versions.hono} · Hono 5 ${versions.hono5}
 **Method:** each contestant ran in its own process; ${config.warmup.toLocaleString('en-US')} warm-up iterations, then ${config.rounds} timed rounds of ${config.iterations.toLocaleString('en-US')} iterations. Every iteration awaits the handler and reads the response body (\`await res.text()\`). Cells show the mean of the rounds with the ops/s min–max spread in parentheses.
 **Request reuse:** bodyless requests are prebuilt once outside the timed loop; POST requests are rebuilt per iteration for every contestant (a body can be read only once), so the same construction cost is paid by all.
 **Correctness gate:** identical to the HTTP battle — each contestant's handler was probed once before warm-up; status, content-type and body had to match the expected response, and validation scenarios had to reject an invalid body with a 4xx. A \`FAIL\` cell was not measured.

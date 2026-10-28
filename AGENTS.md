@@ -9,7 +9,7 @@ separate repository from the framework (`burger-api`) and contains no
 framework code. Its only job is to measure how BurgerAPI behaves under load for
 the features BurgerAPI actually provides.
 
-**Tech:** Bun >= 1.3.0, TypeScript (ESM), Bombardier (HTTP load generator)
+**Tech:** Bun >= 1.4.4, TypeScript (ESM), Bombardier (HTTP load generator)
 **Status:** The single source of truth for BurgerAPI performance testing.
 
 ## Related Repositories
@@ -155,7 +155,7 @@ After changes:
 ## Rule 10 — Battle Module (Cross-Framework Comparison)
 
 The `battle/` directory is an **isolated, opt-in** comparison of BurgerAPI
-against other frameworks (Elysia 1.4.x, Elysia 2 beta, Hono, Express). It is
+against other frameworks (Elysia 1.4.x, Elysia 2 RC, Hono 4, Hono 5 RC, Express). It is
 separate from the core BurgerAPI-only suite and must not change it.
 
 - The core suite (`scenarios/`, `src/runner.ts`, `src/report.ts`,
@@ -188,7 +188,8 @@ separate from the core BurgerAPI-only suite and must not change it.
   BurgerAPI's Bun `serve()` native-route path is not what is measured here.
 - **Versions:** read each framework's `package.json` at runtime for the report
   header. Bump versions in `package.json` (`elysia` 1.x, `elysia2` =
-  `npm:elysia@<2.x>`, `hono`, `express`) then `bun install`; never hardcode a
+  `npm:elysia@<2.x>`, `hono`, `hono5` = `npm:hono@<5.x>`, `express`) then
+  `bun install`; never hardcode a
   version into battle code.
 - **Fairness rule:** all contestants run on Bun. Express is Node-based and runs
   under Bun's Node compatibility; the report must always foot-note this so the

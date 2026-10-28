@@ -16,10 +16,11 @@
     "@hono/zod-validator": "^0.9.1",
     "burger-api": "link:burger-api",
     "elysia": "^1.4.30",
-    "elysia2": "npm:elysia@2.0.0-beta.19",
+    "elysia2": "npm:elysia@2.0.0-rc.0",
     "express": "^5.2.1",
     "hono": "^4.13.9",
-    "zod": "^4.5.4"
+    "hono5": "npm:hono@5.0.0-rc.1",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/bun": "latest",

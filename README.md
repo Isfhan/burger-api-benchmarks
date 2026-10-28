@@ -251,8 +251,9 @@ bun run battle --seed 42        # reproduce a shuffled contestant order
 | --- | --- | --- |
 | BurgerAPI | local `link:burger-api` working copy | re-link the framework package |
 | Elysia | `elysia` | `"elysia": "^1.4.30"` |
-| Elysia 2 | `elysia2` (`npm:elysia@2.0.0-beta.19`, the `next` tag) | `"elysia2": "npm:elysia@<version>"` |
+| Elysia 2 | `elysia2` (`npm:elysia@2.0.0-rc.0`, the `rc` tag) | `"elysia2": "npm:elysia@<version>"` |
 | Hono | `hono` | `"hono": "^4.13.9"` |
+| Hono 5 | `hono5` (`npm:hono@5.0.0-rc.1`, the `next` tag) | `"hono5": "npm:hono@<version>"` |
 | Express | `express` | `"express": "^5.2.1"` |
 
 The installed versions are read from each package's `package.json` at runtime

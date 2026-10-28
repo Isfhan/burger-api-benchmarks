@@ -2,6 +2,7 @@ import { createApp as burgerApp } from './challengers/burger';
 import { createApp as elysiaApp } from './challengers/elysia';
 import { createApp as elysia2App } from './challengers/elysia2';
 import { createApp as honoApp } from './challengers/hono';
+import { createApp as hono5App } from './challengers/hono5';
 import { createApp as expressApp } from './challengers/express';
 import type { BattleContestants, BattleRouteSpec } from './types';
 
@@ -15,6 +16,7 @@ export function contestantsFor(spec: BattleRouteSpec): BattleContestants {
     elysia: () => elysiaApp(spec),
     elysia2: () => elysia2App(spec),
     hono: () => honoApp(spec),
+    hono5: () => hono5App(spec),
     express: () => expressApp(spec),
   };
 }

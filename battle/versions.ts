@@ -7,6 +7,7 @@ export interface FrameworkVersions {
   elysia: string;
   elysia2: string;
   hono: string;
+  hono5: string;
   express: string;
   zodValidator: string;
 }
@@ -23,12 +24,13 @@ async function readVersion(pkg: string): Promise<string> {
 }
 
 export async function collectFrameworkVersions(): Promise<FrameworkVersions> {
-  const [elysia, elysia2, hono, express, zodValidator] = await Promise.all([
+  const [elysia, elysia2, hono, hono5, express, zodValidator] = await Promise.all([
     readVersion('elysia'),
     readVersion('elysia2'),
     readVersion('hono'),
+    readVersion('hono5'),
     readVersion('express'),
     readVersion('@hono/zod-validator'),
   ]);
-  return { elysia, elysia2, hono, express, zodValidator };
+  return { elysia, elysia2, hono, hono5, express, zodValidator };
 }

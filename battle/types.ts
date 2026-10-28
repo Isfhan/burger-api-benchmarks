@@ -22,6 +22,7 @@ export interface BattleContestants {
   elysia: () => FrameworkApp;
   elysia2?: () => FrameworkApp;
   hono: () => FrameworkApp;
+  hono5?: () => FrameworkApp;
   express: () => FrameworkApp;
 }
 
@@ -49,6 +50,7 @@ export const CONTESTANT_ORDER: ContestantName[] = [
   'elysia',
   'elysia2',
   'hono',
+  'hono5',
   'express',
 ];
 
@@ -57,6 +59,7 @@ export const CONTESTANT_LABEL: Record<ContestantName, string> = {
   elysia: 'Elysia',
   elysia2: 'Elysia 2',
   hono: 'Hono',
+  hono5: 'Hono 5',
   express: 'Express',
 };
 
@@ -66,6 +69,7 @@ export const CONTESTANT_VALIDATOR: Record<ContestantName, string> = {
   elysia: 'TypeBox `t.Object({ name: t.String(), age: t.Number() })`',
   elysia2: 'TypeBox `t.Object({ name: t.String(), age: t.Number() })`',
   hono: '`@hono/zod-validator` with Zod',
+  hono5: '`hono/validator` with Zod `safeParse`',
   express: 'Zod `safeParse` in the handler',
 };
 
